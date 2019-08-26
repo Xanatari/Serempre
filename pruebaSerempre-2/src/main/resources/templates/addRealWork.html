@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Real Work </title>
+</head>
+<body>
+	<h1>Add Real Work</h1>
+	<hr />
+
+	<form action="#" th:action="@{/add}" th:object="${homework}"
+		method="post">
+		<table>
+			<tr>
+				<td>ID Employee</td>
+				<td><input type="text" th:field="*{idTrabajdor}" readonly="readonly"></td>
+			</tr>
+			<tr>
+				<td>Name Employee</td>
+				<td><input type="text" th:field="*{nombreTrabajador}" readonly="readonly"></td>
+			</tr>
+				<tr>
+				<td>ID Homework</td>
+				<td><input type="text" th:field="*{idTarea}" readonly="readonly"></td>
+			</tr>
+			<tr>
+				<td>Title Homework</td>
+				<td><input type="text" th:field="*{Titulo}" readonly="readonly"></td>
+			</tr>
+			<tr>
+				<td>Description</td>
+				<td><input type="text" th:field="*{Descripcion}" readonly="readonly"></td>
+			</tr>
+			<tr>
+				<td>Estimate Time</td>
+				<td><input type="text" th:field="*{tiempoEstimado}" readonly="readonly"></td>
+			</tr>	
+			<tr>
+				<td>Real Work</td>
+				<td><input type="text" th:field="*{tiempoTrabajdo}"></td>
+			</tr>			
+			<tr>
+				<td colspan="2"><button type="submit">Save</button></td>
+			</tr>
+		</table>
+
+	</form>
+
+</body>
+</html>

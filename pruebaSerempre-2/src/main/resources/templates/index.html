@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Homework's Employee</title>
+</head>
+<body>
+	<h1>Homework's Employee</h1>
+	<hr />
+	<a href="new">Create new HomeWork </a>
+	<br/><br/>
+	<table border="1" cellpadding="10">
+		<thead>
+			<tr>
+				<th>Id Employee</th>
+				<th>Name Employee</th>
+				<th>ID Homework</th>
+				<th>Title HomeWork</th>
+				<th>Description</th>
+				<th>Estimate Time</th>
+				<th>Real Work</th>	
+				<th>Time Total</th>						
+			</tr>
+		</thead>
+		<tbody>
+		<tr th:each="Trabajador : ${listTareas}">
+				<th th:text="${Trabajador.idTrabajdor}">Id Employee</th>
+				<th th:text="${Trabajador.nombreTrabajador}">Name Employee</th>
+				<th th:text="${Trabajador.idTarea}">ID Homework</th>	
+				<th th:text="${Trabajador.Titulo}">Title HomeWork</th>
+				<th th:text="${Trabajador.Descripcion}">Descriptionn</th>
+				<th th:text="${Trabajador.tiempoEstimado}">Estimate Time</th>
+				<th th:text="${Trabajador.tiempoTrabajdo}">Real Work</th>
+				<th th:text="${Trabajador.tiempoTotal}">Real Work</th>	
+				<th> 
+					<a th:href="@{'/edit/' + ${Trabajador.idTarea}}">add Real Work</a>
+				</th>			
+		</tr>
+		</tbody>
+	</table>
+	
+</body>
+</html>
